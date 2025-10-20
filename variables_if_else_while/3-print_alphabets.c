@@ -17,7 +17,7 @@ putchar(i);
 for (j = 65; j <= 90; j++)
 {
 putchar(j);
-putchar('\n');
 }
+putchar('\n');
 return (0);
 }
