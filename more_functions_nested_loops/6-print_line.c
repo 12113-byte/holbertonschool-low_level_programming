@@ -2,7 +2,7 @@
 
 /**
 * print_line - draws a straight line in the terminal
-*
+* @i: the amount of times '_' gets printed
 */
 
 void print_line(int n)
@@ -18,6 +18,6 @@ for (i = 0; i < n; i++)
 {
 _putchar('_');
 }
-}
 _putchar('\n');
+}
 }
