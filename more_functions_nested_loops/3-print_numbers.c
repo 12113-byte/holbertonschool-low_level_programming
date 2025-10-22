@@ -2,7 +2,7 @@
 
 /**
 * print_numbers - prints numbers 0-9, followed by a new line.
-* Return: 0 on success
+* 
 */
 
 void print_numbers(void)
@@ -13,5 +13,4 @@ for (n = 48; n >= 57; n++)
 _putchar(n);
 _putchar('\n');
 }
-return (0);
 }
