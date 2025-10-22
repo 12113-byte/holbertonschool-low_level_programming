@@ -2,7 +2,6 @@
 
 /**
 * print_line - draws a straight line in the terminal
-* @i: the amount of times '_' gets printed
 * @n: counts _
 */
 
