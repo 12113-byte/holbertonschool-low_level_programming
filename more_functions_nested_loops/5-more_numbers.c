@@ -8,7 +8,7 @@
 void more_numbers(void)
 {
 int i;
-int j;
+int n;
 for (i = 1; i <= 10; i++)
 {
 for (n = 0; n <= 14; n++)
