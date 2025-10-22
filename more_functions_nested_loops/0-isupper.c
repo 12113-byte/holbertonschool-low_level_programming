@@ -10,11 +10,11 @@ int _isupper(int c)
 int result;
 if (c >= 'A' && c <= 'Z')
 {
-result = 1
+result = 1;
 }
 else
 {
-result = 0
+result = 0;
 }
 _putchar(c);
 _putchar(':');
