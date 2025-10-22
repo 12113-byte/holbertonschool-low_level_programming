@@ -16,7 +16,5 @@ else
 {
 result = 0;
 }
-_putchar(c);
-_putchar(':');
 return (result);
 }
