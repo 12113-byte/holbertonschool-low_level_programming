@@ -1,26 +1,29 @@
 #include "main.h"
 
 /**
-*print_diagonal - prints a diagonal line after spaces.
-*@space: prints the amount of spaces needed
+* print_diagonal - prints a diagonal line.
+*
 */
 
 void print_diagonal(int n)
 {
-  int space;
-  
-  if (n <= 0)
-    {
-      _putchar('\n');
-    }
-  else
-    {
-    for (n = 0; n < 0; n++)
-	{
-	  space = n - 1;
-	  _putchar(space);
-	  _putchar('\\');
-	}
-    _putchar('\n');
-    }
+int i;
+int j;
+
+if (n <= 0)
+{
+_putchar('\n');
+}
+else
+{
+for (i = 0; i < n; i++)
+{
+for (j = 0; j < i ; j++)
+{
+_putchar(' ');
+}
+_putchar('\\');
+_putchar('\n');
+}
+}
 }
