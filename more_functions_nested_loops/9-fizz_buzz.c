@@ -26,8 +26,8 @@ printf("Fizz");
 else
 {
 printf("%d", n);
-printf(" ");
 }
+printf(" ");
 }
 return (0);
 }
