@@ -1,8 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - prints numbers from 1-100, replacing multiples of three with Fizz and
+ * main - prints numbers from 1-100, replacing multiples of 
+ * three with Fizz and
  * multiples of 5 by Buzz. Combined FizzBuzz.
+ * 
+ * Return: 0 on success
  */
 
 int main(void)
@@ -27,7 +30,14 @@ else
 {
 printf("%d", n);
 }
+if (n < 100)
+{
 printf(" ");
+}
+else
+{
+printf("\n");
+}
 }
 return (0);
 }
