@@ -1,0 +1,1 @@
+Tasks about pointers and arrays.
