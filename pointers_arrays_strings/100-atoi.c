@@ -2,8 +2,8 @@
 
 /**
  * _atoi - converts a string to an integer.
- *
- * Return: the result of num*sign
+ * @s: pointer to the string to be converted
+ * Return: integer value
  */
 
 int _atoi(char *s)
@@ -25,5 +25,5 @@ while (s[i] >= '0' && s[i] <= '9')
 num = num * 10 + (s[i] - '0');
 i++;
 }
-return (num *sign);
+return num * sign;
 }
