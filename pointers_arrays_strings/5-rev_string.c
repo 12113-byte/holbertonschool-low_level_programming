@@ -19,7 +19,7 @@ return (length);
 
 /**
  * rev_string - saves the modified string in reverse.
- *
+ * @s: the array
  */
 
 void rev_string(char *s)
