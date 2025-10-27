@@ -24,11 +24,6 @@ char *cap_string(char *str)
 		*p = *p - 32;
 		capitalize = 0;
 		}
-		else if (*p >= 'A' && *p <= 'Z' && capitalize == 0)
-		{
-		*p = *p + 32;
-		capitalize = 0;
-		}
 		p++;
 	}
 	return (str);
