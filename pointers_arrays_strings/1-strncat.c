@@ -5,6 +5,7 @@
  * @dest: first part of the string
  * @src: second part of the string
  * @n: counter where to stop copying
+ * Return: the full string in dest
  */
 
 char *_strncat(char *dest, char *src, int n)
