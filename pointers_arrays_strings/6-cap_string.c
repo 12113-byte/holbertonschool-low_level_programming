@@ -19,14 +19,18 @@ char *cap_string(char *str)
 		{
 		capitalize = 1;
 		}
-		if ((*p >= 'a' && *p <= 'z') && capitalize == 1)
+		else if ((*p >= 'a' && *p <= 'z') && capitalize)
 		{
 		*p = *p - 32;
 		capitalize = 0;
 		}
-		else if (*p >= 'A' && *p <= 'Z' && capitalize == 0)
+		else if (*p >= 'A' && *p <= 'Z' && !capitalize)
 		{
 		*p = *p + 32;
+		}
+		else
+		{
+			capitalize = 0;
 		}
 		p++;
 	}
