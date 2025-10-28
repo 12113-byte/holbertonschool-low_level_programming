@@ -8,10 +8,10 @@
 
 char *leet(char *s)
 {
-  int i = 0;
-  int j = 0;
-  char num [] = {'4','4','3','3','0','0','7','7','1','1'};
-  char letters [] = {'a','A','e','E','o','O','t','T','l','L'};
+int i = 0;
+int j = 0;
+char num [] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+char letters [] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 
 while (s[i] != '\0')
 {
@@ -23,7 +23,7 @@ for (j = 0; j < 10; j++)
 	break;
 	}
 	}
- i++;
- }
- return s;
+i++;
+}
+return (s);
 }
