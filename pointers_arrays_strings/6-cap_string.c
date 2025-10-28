@@ -1,4 +1,50 @@
 #include "main.h"
+#include <stdio.h>
+
+/**
+ * is_special_char - 
+ * Return: 1 on success
+ *
+ */
+
+int is_special_char(char c)
+{
+if (c == '?' || c == '"' || c == '(' || c == ')' || c == '-' ||
+    c == '{' || c == '}' || c == ';' || c == '.' || c == '!' ||
+    c  == ',' || c == ' ' || c == '\n' || c == '\t')
+  {
+    return (1);
+  }
+ return (0);
+}
+
+/**
+ * is_lower - checks for lowercase letters
+ * Return: 1 on success
+ */
+
+int is_lower(char c)
+{
+if (c >= 'a' && c <= 'z')
+  {
+    return (1);
+  }
+ return (0);
+}
+
+/**
+ * is_upper - checks for uppercase letters
+ * Return: 1 on success
+ */
+
+int is_upper(char c)
+{
+if (c >= 'A' && c <= 'Z')
+  {
+    return (1);
+  }
+ return (0);
+  }
 
 /**
  * cap_string - capitalizes all words of a string
@@ -9,31 +55,14 @@
 char *cap_string(char *str)
 {
 	char *p = str;
-	int capitalize = 1;
 
 	while (*p != '\0')
 	{
-		if (*p == '?' || *p == '"' || *p == '(' || *p == ')' || *p == '-' ||
-		*p == '{' || *p == '}' || *p == ';' || *p == '.' || *p == '!' ||
-		*p == ',' || *p == ' ' || *p == '\n' || *p == '\t' ||
-		(*p >= '0' && *p >= '9'))
-		{
-		capitalize = 1;
-		}
-		else if ((*p >= 'a' && *p <= 'z') && capitalize)
-		{
-		*p = *p - 32;
-		capitalize = 0;
-		}
-		else if (*p >= 'A' && *p <= 'Z' && !capitalize)
-		{
-		*p = *p + 32;
-		}
-		else
-		{
-			capitalize = 0;
-		}
-		p++;
+	  if (is_lower(*p) == 1 && is_special_char(*(p-1)) == 1)
+	  {
+	    *p = *p - 32;
+	  }
+	p++;
 	}
 	return (str);
 }
