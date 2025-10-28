@@ -56,11 +56,15 @@ char *cap_string(char *str)
 {
 	char *p = str;
 
+	if (is_lower(*str) == 1)
+	  {
+	    *str = *str - ('a' - 'A');
+	  }
 	while (*p != '\0')
 	{
-	  if (is_lower(*p) == 1 && is_special_char(*(p-1)) == 1)
+	  if (is_lower(*p) == 1 && is_special_char(*(p - 1)) == 1)
 	  {
-	    *p = *p - 32;
+	    *p = *p - ('a' - 'A');
 	  }
 	p++;
 	}
