@@ -9,13 +9,13 @@
 
 int support(int i, int n)
 {
-	if (n % i == 0)
-	{
-		return (0);
-	}
 	if (i == n)
 	{
 		return (1);
+	}
+	if (n % i == 0)
+	{
+		return (0);
 	}
 	return (support(i + 1, n));
 }
@@ -28,12 +28,10 @@ int support(int i, int n)
 
 int is_prime_number(int n)
 {
-	int i = 2;
-
 	if (n <= 1)
 	{
 		return (0);
 	}
-	return (support(i, n));
+	return (support(2, n));
 }
 
