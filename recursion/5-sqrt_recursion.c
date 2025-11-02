@@ -4,6 +4,7 @@
  * support - helps to find the natural square root
  * @i: number for square root
  * @n: comparison number, number given
+ * Return: natural suqare root on success
  */
 
 int support(int n, int i)
@@ -16,7 +17,7 @@ int support(int n, int i)
 	{
 		return (-1);
 	}
-	return support(n, i + 1);
+	return (support(n, i + 1));
 }
 
 /**
@@ -35,6 +36,6 @@ int _sqrt_recursion(int n)
 	{
 		return (0);
 	}
-	return support(n, 1);
+	return (support(n, 1));
 }
 
