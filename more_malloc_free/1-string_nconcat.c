@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
  * string_nconcat - concatenates two strings
  * @s1: first part of string
@@ -17,7 +16,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int copy_len_s2;
 	unsigned int i, j;
 	char *array;
-	
+
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -34,31 +33,28 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		length_s2++;
 	}
-	
 	if (n < length_s2)
-        {
-                copy_len_s2 = n;
-        }
+	{
+		copy_len_s2 = n;
+	}
 	else
 	{
 		copy_len_s2 = length_s2;
 	}
-	
 	array = malloc((length_s1 + copy_len_s2 + 1) * sizeof(char));
 	if (array == NULL)
 	{
 		return (NULL);
 	}
-
-       	for (i = 0; i < length_s1; i++)
-        {
-                array[i] = s1[i];
-        }
-        for (j = 0; j < copy_len_s2; j++)
-        {       
-                array[length_s1 + j] = s2[j];
-        }       
-        array[length_s1 + j] = '\0';
-        return (array);
+	for (i = 0; i < length_s1; i++)
+	{
+		array[i] = s1[i];
+	}
+	for (j = 0; j < copy_len_s2; j++)
+	{
+		array[length_s1 + j] = s2[j];
+	}
+	array[length_s1 + j] = '\0';
+	return (array);
 }
 
