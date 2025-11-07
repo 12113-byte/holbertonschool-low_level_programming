@@ -2,23 +2,24 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *
- *
- *
+ * new_dog - creates a new dog_t struct
+ * @name: of dog
+ * @age: of dog
+ * @owner: owner name of dog
+ * Return: pointer to new struct, or NULL on failure
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog_ptr;
-	int i = 0, j = 0;
 	char *new_dog_name, *new_dog_owner;
 
 	new_dog_ptr = malloc(sizeof(dog_t));
 	if (new_dog_ptr == NULL)
 		return (NULL);
-	while (name[i] != '\0')
-		i++;
-	while (owner[j] != '\0')
-		j++;
+	for (i = 0; name[i] != '\0'; i++)
+		;
+	for (j = 0; owner[j] != '\0'; j++)
+		;
 	new_dog_name = malloc((i + 1) * sizeof(char));
 	if (new_dog_name == NULL)
 	{
