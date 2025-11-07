@@ -4,13 +4,13 @@
 
 /**
  * free_dog - frees malloc from dog
- * @d: pointer to dog structur
+ * @d: pointer to dog_t struct
  */
 
 void free_dog(dog_t *d)
 {
-	free(dog_t->name);
-	free(dog_t->owner);
-	free(dog_t);
+	free(d->name);
+	free(d->owner);
+	free(d);
 }
 
