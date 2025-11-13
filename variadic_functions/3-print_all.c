@@ -8,17 +8,21 @@
  */
 
 void print_a_char(char c)
+{
 	printf("%c%c ", c);
-
+}
 void print_a_int(int i)
+{
 	printf("%i%c", i);
-
+}
 void print_a_float(double f)
+{
 	printf("%f%c", f);
-
+}
 void print_a_char_ptr(char *s)
+{
 	printf("%s%c", s);
-
+}
 /**
  * print_all - prints everything
  *
