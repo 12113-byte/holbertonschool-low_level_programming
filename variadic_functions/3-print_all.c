@@ -9,19 +9,19 @@
 
 void print_a_char(char c)
 {
-	printf("%c%c ", c);
+	printf("%c", c);
 }
 void print_a_int(int i)
 {
-	printf("%i%c", i);
+	printf("%i", i);
 }
 void print_a_float(double f)
 {
-	printf("%f%c", f);
+	printf("%f", f);
 }
 void print_a_char_ptr(char *s)
 {
-	printf("%s%c", s);
+	printf("%s", s);
 }
 /**
  * print_all - prints everything
