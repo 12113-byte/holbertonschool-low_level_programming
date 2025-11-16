@@ -37,10 +37,7 @@ void print_a_char_ptr(va_list args)
 	{
 		printf("(nil)");
 	}
-	else
-	{
-		printf("%s", value);
-	}
+	printf("%s", value);
 }
 /**
  * print_all - prints everything
