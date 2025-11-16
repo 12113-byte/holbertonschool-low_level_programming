@@ -62,7 +62,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 	va_start(args, format);
 
-	while (*p != '\0')
+	while (p && *p)
 	{
 		i =  0;
 		while (form_types[i].symbol != NULL)
