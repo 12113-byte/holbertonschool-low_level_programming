@@ -3,25 +3,44 @@
 #include <stdlib.h>
 
 /**
- *
+ * print_a_char - prints  only  a char
  *
  */
-
-void print_a_char(char c)
+void print_a_char(va_list args)
 {
-	printf("%c", c);
+	char value = va_arg(args, int);
+	printf("%c", value);
 }
-void print_a_int(int i)
+/**
+ * print_an_int - prints only  ints
+ */
+void print_an_int(va_list args)
 {
-	printf("%i", i);
+	int value = va_arg(args, int);
+	printf("%i", value);
 }
-void print_a_float(double f)
+/**
+ * print_a_float - prints a  float
+ */
+void print_a_float(va_list args)
 {
-	printf("%f", f);
+	double value = va_arg(args, double);
+	printf("%f", value);
 }
-void print_a_char_ptr(char *s)
+/**
+ * print_a_char_ptr - prints a char pointer
+ */
+void print_a_char_ptr(va_list args)
 {
-	printf("%s", s);
+	char *value = va_arg(args, char  *);
+	if (value ==  NULL)
+	{
+		printf("(nil)");
+	}
+	else
+	{
+		printf("%s", value);
+	}
 }
 /**
  * print_all - prints everything
@@ -32,59 +51,35 @@ void print_a_char_ptr(char *s)
 
 void print_all(const char * const format, ...)
 {
-va_list args;
-char c;
-int i;
-float f;
-char *s;
-const char *separator = ", ";
+	char *separator = "";
+	int i;
 
-va_start(args, format);
+	printer_t form_types[] = {
+		{ "c", print_a_char },
+		{ "i", print_an_int },
+		{ "f", print_a_float },
+		{ "s", print_a_char_ptr },
+		{NULL, NULL},
+	};
+	va_list args;
+	va_start(args, format);
 
-while (*format != '\0')
-{
-const char *next = format + 1;
-
-	if (*format == 'c')
-{
-	c = va_arg(args, int);
-	print_a_char(c);
-}
-else if (*format == 'i')
-{
-	i = va_arg(args, int);
-	print_a_int(i);
-}
-else if (*format == 'f')
-{
-	f = va_arg(args, double);
-	print_a_float(f);
-}
-else if (*format == 's')
-{
-	s = va_arg(args, char *);
-
-		if (s == NULL)
-		{
-		printf("(nil)");
-		}
-		else
-		{
-		print_a_char_ptr(s);
-		}
-}
-while (*next != '\0')
-{
-	if (*next == 'c' || *next == 'i' || *next == 'f' || *next == 's')
+	while (*format != '\0')
 	{
-	printf("%s", separator);
-	break;
+		i =  0;
+		while (form_types[i].symbol != NULL)
+		{
+			if (*(form_types[i].symbol) == *format)
+			{
+				printf("%s", separator);
+				form_types[i].func(args);
+				separator = ", ";
+			}
+			i++;
+		}
+		format++;
 	}
-	next++;
-}
-format++;
-}
-va_end(args);
-printf("\n");
+	va_end(args);
+	printf("\n");
 }
 
