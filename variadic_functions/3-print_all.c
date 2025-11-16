@@ -52,6 +52,7 @@ void print_a_char_ptr(va_list args)
 void print_all(const char * const format, ...)
 {
 	char *separator = "";
+	const char *p = format;
 	int i;
 
 	printer_t form_types[] = {
@@ -64,12 +65,12 @@ void print_all(const char * const format, ...)
 	va_list args;
 	va_start(args, format);
 
-	while (*format != '\0')
+	while (*p != '\0')
 	{
 		i =  0;
 		while (form_types[i].symbol != NULL)
 		{
-			if (*(form_types[i].symbol) == *format)
+			if (*(form_types[i].symbol) == *p)
 			{
 				printf("%s", separator);
 				form_types[i].func(args);
@@ -77,7 +78,7 @@ void print_all(const char * const format, ...)
 			}
 			i++;
 		}
-		format++;
+		p++;
 	}
 	va_end(args);
 	printf("\n");
