@@ -4,9 +4,9 @@
 #include "lists.h"
 
 /**
- *
- *
- *
+ * print_list - prints all elements of list_t
+ * @h: start of singly linked list
+ * Return: the number of nodes (length)
  */
 
 size_t print_list(const list_t *h)
@@ -27,6 +27,6 @@ size_t print_list(const list_t *h)
 		len++;
 		node = node->next;
 	}
-	return(len);
+	return (len);
 }
 
