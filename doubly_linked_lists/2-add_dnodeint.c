@@ -6,7 +6,7 @@
 /**
  * add_dnodeint - adds a new node at the beginning
  * @head: beginning of the linked list
- * @n:
+ * @n: value stored in node
  * Return: address of the new element on success, otherwise NULL
  */
 
