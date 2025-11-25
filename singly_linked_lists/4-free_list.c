@@ -5,6 +5,7 @@
 
 /**
  * free_list - frees list_t
+ * @head: start of list
  */
 
 void free_list(list_t *head)
@@ -19,6 +20,5 @@ void free_list(list_t *head)
 		free(current);
 		current = temp;
 	}
-	return;
 }
 
