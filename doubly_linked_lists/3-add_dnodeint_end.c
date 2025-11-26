@@ -10,7 +10,7 @@
  * Return: address of new element on success, otherwise NULL
  */
 
-dlistint_t *addnodeint_end(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new = malloc(sizeof(dlistint_t));
 	dlistint_t *tail = *head;
