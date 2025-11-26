@@ -4,9 +4,9 @@
 #include "lists.h"
 
 /*
- * add_dnodeint_end - adds a new node at the end of dlistint_t
+ * add_dnodeint_end: adds a new node at the end of dlistint_t
  * @head: start of the list
- * @n: value stored in node
+ * @n: value stored in the node
  * Return: address of new element on success, otherwise NULL
  */
 
