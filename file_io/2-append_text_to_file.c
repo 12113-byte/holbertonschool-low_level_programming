@@ -15,7 +15,7 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
-	ssize_t byt4es_written;
+	ssize_t bytes_written;
 	size_t len;
 
 	if (filename == NULL)
@@ -29,7 +29,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 	if (text_content)
 	{
-		len = srlen(text_content);
+		len = strlen(text_content);
 		bytes_written = write(fd, text_content, len);
 		if (bytes_written != (ssize_t)len)
 		{
