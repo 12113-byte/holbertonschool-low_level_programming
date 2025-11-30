@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 #include <string.h>
-
+#include <fcntl.h>
 /**
  * create_file - creates a file
  * @filename: the name of the file to be created
